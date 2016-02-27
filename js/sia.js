@@ -61,7 +61,7 @@ function SiadWrapper () {
       request(call, function (err, response, body) {
         // The error from request should be null if siad is running
         running = !err
-
+        
         // If siad puts out an error, pass it as first argument to callback
         if (!err && response.statusCode !== 200) {
           err = body
